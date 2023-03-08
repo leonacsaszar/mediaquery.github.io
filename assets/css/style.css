@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Gugi&family=MuseoModerno:wght@100;300;400&family=Raleway:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,700&family=Roboto:wght@300;400;500;700&display=swap');
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'MuseoModerno', cursive;
+}
+.nav {
+    background-color: #af666f;
+    color: rgb(245, 217, 217);
+    display: block;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+   
+}
+h5{
+    font-family: 'Clicker Script', cursive; 
+    justify-content: center;
+}
+.logo{
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+    
+    
+   
+
+.logo img{
+   
+    width: 15%;
+}
+.filtros {
+    background-color: #847186;
+    color: white;
+    padding: 10px;    
+    grid-area: filtros;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filtros select{
+    width: 200px;
+}
+
+.main {
+    padding: 20px;
+    grid-area: main;
+    background-color: #c0b7ba;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    align-content: space-between;
+}
+
+.card{
+background-color: white;
+border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.card img{
+    width: 100%;
+    
+}
+
+.card button{
+    width: 40%;
+    background-color: #74978d;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.pages{
+    background-color: #847186;
+    color: white;
+    padding: 1em;
+    grid-area: pages;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.pages button{
+    
+    background-color:  #c7b0b7;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.footer {
+    background-color:  #c7b0b7;
+    color: white;
+    padding: 10px;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.menu {
+    display: none;
+}
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "nav" 
+    "filtros" 
+    "main"
+    "pages"
+    "footer";
+}
+@media (min-width: 576px){
+    .grid {
+    padding-left: 0%;
+    padding-right: 0%;
+        grid-template-columns: 2fr 8fr;
+        grid-template-rows: 1fr 12fr 0.5fr;
+        grid-template-areas: 
+        "nav filtros"
+        "nav main"
+        "footer pages";
+    }
+
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+    .logo img{
+        width: 40%;
+    }
+    .menu {
+        display: block;
+    }
+
+    .fa-bars {  
+        display: none; 
+    }
+
+    .nav {  
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px; 
+    } 
+    .pages button{
+    
+        background-color:  #c7b0b7;
+        border: none;
+        color: white;
+        padding: 3px 6px;
+}
+}
+@media (min-width:992px){
+    .grid {
+    padding-left: 0%;
+    padding-right: 0%;
+        grid-template-columns: 2fr 8fr;
+        grid-template-rows: 1fr 12fr 0.5fr;
+        grid-template-areas: 
+        "nav filtros"
+        "nav main"
+        "footer pages";
+    }
+
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+    .logo img{
+        width: 40%;
+    }
+    .menu {
+        display: block;
+    }
+
+    .fa-bars {  
+        display: none; 
+    }
+
+    .nav {  
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px; 
+    } 
+    .pages button{
+    
+        background-color:  #c7b0b7;
+        border: none;
+        color: white;
+        padding: 3px 6px;
+}
+}
